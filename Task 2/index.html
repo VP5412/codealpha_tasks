@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness Training</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="app-container">
+        <!-- Floating Navigation -->
+        <nav class="slide-nav">
+            <button class="nav-dot active" data-index="0" title="Introduction"></button>
+            <button class="nav-dot" data-index="1" title="Anatomy of Phishing"></button>
+            <button class="nav-dot" data-index="2" title="Social Engineering"></button>
+            <button class="nav-dot" data-index="3" title="Best Practices"></button>
+            <button class="nav-dot" data-index="4" title="Interactive Quiz"></button>
+        </nav>
+
+        <!-- Main Slides Container -->
+        <main class="slides-container">
+            
+            <!-- Slide 0: Introduction -->
+            <section class="slide active" id="slide-0">
+                <div class="content-wrapper hero-slide">
+                    <div class="hero-text">
+                        <div class="badge">Security Awareness</div>
+                        <h1>Don't Get <span class="highlight-cyan">Hooked.</span></h1>
+                        <p>Welcome to the Phishing Awareness Training Module. In the next few minutes, you will learn how to identify malicious actors, spot fake websites, and protect your digital assets.</p>
+                        <button class="btn-primary" onclick="nextSlide()">Start Training <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img src="assets/hero.png" alt="Cyber Phishing Hook" class="floating-img" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 1: Anatomy of Phishing -->
+            <section class="slide" id="slide-1">
+                <div class="content-wrapper anatomy-slide">
+                    <div class="text-col">
+                        <h2>Anatomy of a <span class="highlight-red">Fake Email</span></h2>
+                        <p>Hover over the highlighted areas in the email to reveal common red flags that attackers use to trick you.</p>
+                        
+                        <div class="info-card" id="anatomy-info">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <p>Interact with the email on the right to learn more.</p>
+                        </div>
+                    </div>
+                    <div class="visual-col">
+                        <div class="fake-email">
+                            <div class="email-header">
+                                <div class="sender">
+                                    <span class="label">From:</span> 
+                                    <span>IT Support <span class="spoof hoverable" data-info="Check the sender address carefully! Notice how 'support@paepal.com' uses a typo to look like the real PayPal.">support@paepal.com</span></span>
+                                </div>
+                                <div class="subject">
+                                    <span class="label">Subject:</span> 
+                                    <span class="urgent hoverable" data-info="Attackers often create a false sense of urgency so you act quickly without thinking.">URGENT: Your account will be suspended!</span>
+                                </div>
+                            </div>
+                            <div class="email-body">
+                                <p>Dear <span class="hoverable generic" data-info="Legitimate organizations usually greet you by name. Phishers often use generic greetings like 'Dear Customer'.">Customer</span>,</p>
+                                <p>We have detected unusual activity on your account. Please log in immediately to verify your identity, otherwise your account will be permanently locked.</p>
+                                <a href="#" class="btn-fake hoverable" data-info="Always hover over buttons or links without clicking! The destination URL might be malicious.">Verify Account Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Social Engineering -->
+            <section class="slide" id="slide-2">
+                <div class="content-wrapper centered-slide">
+                    <div class="header-center">
+                        <h2>Social Engineering <span class="highlight-cyan">Tactics</span></h2>
+                        <p>Attackers manipulate human psychology. Recognize these common approaches.</p>
+                    </div>
+                    
+                    <div class="cards-grid">
+                        <div class="glass-card">
+                            <div class="icon-wrapper"><i class="fa-solid fa-clock"></i></div>
+                            <h3>False Urgency</h3>
+                            <p>Demanding immediate action to prevent something bad (e.g., account closure) or to gain something good.</p>
+                        </div>
+                        <div class="glass-card">
+                            <div class="icon-wrapper"><i class="fa-solid fa-user-tie"></i></div>
+                            <h3>Authority Spoofing</h3>
+                            <p>Pretending to be a CEO, IT admin, or government official to command compliance without questions.</p>
+                        </div>
+                        <div class="glass-card">
+                            <div class="icon-wrapper"><i class="fa-solid fa-gift"></i></div>
+                            <h3>Baiting</h3>
+                            <p>Offering something enticing, such as a free gift card or exclusive access, in exchange for your credentials.</p>
+                        </div>
+                        <div class="glass-card">
+                            <div class="icon-wrapper"><i class="fa-solid fa-building-shield"></i></div>
+                            <h3>Spear Phishing</h3>
+                            <p>Highly targeted attacks using personal details gathered from social media to make the scam believable.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Best Practices -->
+            <section class="slide" id="slide-3">
+                <div class="content-wrapper list-slide">
+                    <div class="text-col">
+                        <h2>How to stay <span class="highlight-cyan">Secure</span></h2>
+                        <ul class="best-practices-list">
+                            <li>
+                                <div class="icon-check"><i class="fa-solid fa-check"></i></div>
+                                <div>
+                                    <strong>Verify the Source</strong>
+                                    <p>Contact the person or organization through a known, trusted channel (like a real phone number) if unsure.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-check"><i class="fa-solid fa-check"></i></div>
+                                <div>
+                                    <strong>Hover before you Click</strong>
+                                    <p>Always hover over links to see the actual URL destination at the bottom left of your browser.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-check"><i class="fa-solid fa-check"></i></div>
+                                <div>
+                                    <strong>Enable MFA</strong>
+                                    <p>Use Multi-Factor Authentication. Even if they get your password, they still need your second factor.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-check"><i class="fa-solid fa-check"></i></div>
+                                <div>
+                                    <strong>Use a Password Manager</strong>
+                                    <p>A password manager typically won't auto-fill your credentials on a fake URL, acting as a great defense.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Quiz -->
+            <section class="slide" id="slide-4">
+                <div class="content-wrapper quiz-slide">
+                    <div id="quiz-intro" class="quiz-container">
+                        <h2>Ready to test your <span class="highlight-cyan">knowledge?</span></h2>
+                        <p>Complete this short interactive quiz to finish the module.</p>
+                        <button class="btn-primary" onclick="startQuiz()">Begin Quiz</button>
+                    </div>
+
+                    <div id="quiz-question" class="quiz-container hidden">
+                        <div class="progress-bar">
+                            <div class="fill" id="quiz-progress"></div>
+                        </div>
+                        <h3 id="question-text">Question formatting...</h3>
+                        <div class="options-container" id="options-container">
+                            <!-- Options will be injected here -->
+                        </div>
+                        <div id="feedback-message" class="hidden"></div>
+                    </div>
+
+                    <div id="quiz-results" class="quiz-container hidden">
+                        <h2>Training <span class="highlight-cyan">Completed!</span></h2>
+                        <div class="score-display">
+                            <span id="score-text">0</span> / <span id="total-text">0</span>
+                        </div>
+                        <p id="result-message">Great job! You have completed the module.</p>
+                        <button class="btn-secondary" onclick="resetQuiz()"><i class="fa-solid fa-rotate-right"></i> Try Again</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Controls -->
+        <div class="bottom-controls">
+            <button class="icon-btn" id="btn-prev" onclick="prevSlide()" disabled><i class="fa-solid fa-chevron-left"></i> Previous</button>
+            <div class="slide-indicator"><span id="current-slide-num">1</span> / 5</div>
+            <button class="icon-btn" id="btn-next" onclick="nextSlide()">Next <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
