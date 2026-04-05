@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Command Center - IDS Module</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ambient-bg"></div>
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="glass-panel">
+            <div class="logo">
+                <span class="pulse-dot"></span>
+                <h1>NEXUS <span class="highlight">IDS</span></h1>
+            </div>
+            <div class="system-status">
+                <div class="status-item">
+                    <span class="label">Engine:</span>
+                    <span class="value success">ONLINE</span>
+                </div>
+                <div class="status-item toggle-container">
+                    <span class="label">Auto-Mitigation:</span>
+                    <label class="switch">
+                        <input type="checkbox" id="autoMitigateToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard">
+            
+            <!-- Target Radar / Visualization -->
+            <section class="glass-panel radar-section">
+                <h2>Traffic Radar</h2>
+                <div class="radar-container" id="radarContainer">
+                    <div class="radar-sweep"></div>
+                    <div class="radar-grid"></div>
+                    <!-- Nodes will be injected here via JS -->
+                </div>
+                <div class="metrics">
+                    <div class="metric">
+                        <span class="metric-val" id="ppsVal">0</span>
+                        <span class="metric-lbl">Packets / Sec</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Alerts Feed -->
+            <section class="glass-panel alerts-section">
+                <h2>Threat Alerts <span class="badge" id="alertCount">0</span></h2>
+                <div class="alerts-feed" id="alertsFeed">
+                    <!-- Alerts injected here -->
+                    <div class="alert-placeholder">Monitoring secure channels... No threats detected.</div>
+                </div>
+            </section>
+
+            <!-- Active Defense / Mitigation Controls -->
+            <section class="glass-panel defense-section">
+                <h2>Active Defense</h2>
+                <div class="manual-block">
+                    <input type="text" id="ipInput" placeholder="Enter IP (e.g. 192.168.1.5)">
+                    <button id="blockBtn" class="btn danger">Block Node</button>
+                    <button id="unblockBtn" class="btn warning">Unblock Node</button>
+                </div>
+                <div class="system-logs" id="systemLogs">
+                    <div class="log-entry sys">System Initialized. Awaiting telemetry...</div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
