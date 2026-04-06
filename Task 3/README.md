@@ -1,6 +1,6 @@
 # Task 3 — Nexus IDS: Real-Time Intrusion Detection System
 
-Nexus IDS is a full-stack, real-time network intrusion detection system. A Python backend sniffs live network traffic, analyses packets against threat heuristics, and streams alerts to a browser-based dashboard over WebSocket. The dashboard lets operators monitor traffic visually, review threat alerts, and block or unblock IP addresses — automatically or manually.
+Nexus IDS is a full-stack, real-time network intrusion detection system. A Python backend sniffs live network traffic, analyzes packets against threat heuristics, and streams alerts to a browser-based dashboard over WebSocket. The dashboard lets operators monitor traffic visually, review threat alerts, and block or unblock IP addresses — automatically or manually.
 
 ---
 
