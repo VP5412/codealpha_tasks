@@ -97,3 +97,11 @@ Each question provides:
 | Vanilla JavaScript | Navigation state, quiz logic, interactive hover effects |
 | Google Fonts | Inter and Outfit typefaces |
 | Font Awesome 6 | Icons throughout the UI |
+
+---
+
+## Screenshots
+
+<img width="1599" height="763" alt="Phishing Awareness Training — introduction slide" src="https://github.com/user-attachments/assets/43343a80-9b64-4147-ab45-2c0ebea5beb1" />
+
+<img width="1599" height="762" alt="Phishing Awareness Training — interactive quiz slide" src="https://github.com/user-attachments/assets/f67f0791-15aa-4ae4-804e-93d469fe9ae5" />

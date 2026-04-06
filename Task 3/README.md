@@ -180,3 +180,13 @@ python3 test_attack.py 127.0.0.1 --attack dos
 | HTML5 / CSS3 | Dashboard layout and dark glassmorphism styling |
 | Vanilla JavaScript | WebSocket client, radar canvas rendering, UI interactions |
 | iptables / netsh | OS-level firewall rule management |
+
+---
+
+## Screenshots
+
+<img width="1582" height="759" alt="Nexus IDS — traffic radar and alerts feed" src="https://github.com/user-attachments/assets/d74b3d0c-3ab9-4377-b6ce-f4a49a4ee1ee" />
+
+<img width="1574" height="768" alt="Nexus IDS — active defense panel" src="https://github.com/user-attachments/assets/afa4eb98-3113-4631-afbd-2a01c9012def" />
+
+<img width="1574" height="762" alt="Nexus IDS — threat alert details" src="https://github.com/user-attachments/assets/a1706c37-4fe5-4cdf-886f-e421054eb9e3" />
